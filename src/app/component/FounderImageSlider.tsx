@@ -31,7 +31,7 @@ export default function FounderImageSlider({ founders, currentIndex }: FounderIm
               src={founder.image}
               alt={founder.name}
               fill
-              className="object-contain object-center -translate-y-8 relative z-10"
+              className="object-contain object-center -translate-y-8 scale-105 relative z-10"
               style={{
                 filter: 'contrast(1.05) brightness(1.02)'
               }}
