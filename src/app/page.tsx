@@ -7,6 +7,7 @@ import FounderImageSlider from './component/FounderImageSlider';
 import NavigationDots from './component/NavigatonDot';
 import WhatWeOffer from './component/WhatWeOffer';
 
+import MissionVision from './component/MissionVision';
 
 export default function Home() {
   const { currentIndex, currentFounder, founders, setCurrentIndex } = useFounderRotation(5000);
@@ -36,6 +37,7 @@ export default function Home() {
         currentIndex={currentIndex}
         onDotClick={setCurrentIndex}
       />
+      <MissionVision />
 
       {/* WhatWeOffer section will now also have the transitioning background */}
       <WhatWeOffer />
