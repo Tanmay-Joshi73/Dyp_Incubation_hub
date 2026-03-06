@@ -26,7 +26,7 @@ export default async function StartupPage({ params }: { params: Promise<{ id: st
         <div className="min-h-screen bg-[#fdfaf5] transition-colors duration-1000">
             <Navbar />
 
-            <main className="container mx-auto px-8 lg:px-16 pt-40 pb-24">
+            <main className="container mx-auto px-8 lg:px-16 pt-48 pb-24">
                 <Link
                     href="/"
                     className="group flex items-center gap-2 text-black/40 hover:text-black mb-12 transition-colors font-bold uppercase tracking-widest text-xs"

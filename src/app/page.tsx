@@ -70,7 +70,7 @@ export default function Home() {
       <Navbar />
 
       <main
-        className="relative flex flex-col items-center justify-between px-8 pt-12 md:px-12 md:pt-20 lg:flex-row lg:px-16 lg:pt-32 cursor-grab active:cursor-grabbing select-none"
+        className="relative flex flex-col items-center justify-between px-8 pt-32 md:px-12 md:pt-40 lg:flex-row lg:px-16 lg:pt-48 cursor-grab active:cursor-grabbing select-none"
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}

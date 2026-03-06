@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const FOOTER_LINKS = {
     Company: ["About Us", "Our Team", "News", "Careers"],
@@ -15,8 +16,13 @@ export default function Footer() {
                 {/* Top Section */}
                 <div className="flex flex-col lg:flex-row justify-between gap-16 mb-20">
                     <div className="max-w-md">
-                        <a href="/" className="text-4xl font-bold tracking-tight text-black flex items-center gap-[1px] mb-8">
-                            DYP Incubation Hub<span className="text-[#e23e3e]">.</span>
+                        <a href="/" className="relative h-20 md:h-24 w-72 md:w-[400px] block mb-8">
+                            <Image
+                                src="/dyp_transparent.png"
+                                alt="DYP Incubation Hub"
+                                fill
+                                className="object-contain object-left"
+                            />
                         </a>
                         <p className="text-xl text-black/60 font-sans leading-relaxed">
                             Empowering the next generation of founders to build world-changing companies from the ground up.

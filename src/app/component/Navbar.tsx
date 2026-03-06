@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 const NAV_LINKS = ["About Us", "Our Team", "Companies", "Resources", "News"];
 
@@ -19,15 +20,21 @@ export default function Navbar() {
     <>
       <nav
         className={`
-          sticky top-0 z-50 flex items-center justify-between
-          px-8 py-7 md:px-12 lg:px-20 xl:px-24
-          bg-transparent backdrop-blur-sm transition-all duration-300
-          ${scrolled ? "shadow-[0_1px_0_0_rgba(0,0,0,0.05)]" : ""}
+          absolute top-0 left-0 right-0 z-50 flex items-center justify-between
+          px-8 py-4 md:px-12 lg:px-20 xl:px-24
+          transition-all duration-300
+          ${scrolled ? "!fixed bg-white/90 backdrop-blur-md shadow-sm !py-3" : "bg-transparent"}
         `}
       >
         {/* Logo */}
-        <a href="/" className="text-3xl font-bold tracking-tight text-black flex items-center gap-[1px] shrink-0">
-          Balderton<span className="text-[#e23e3e]">.</span>
+        <a href="/" className="relative h-16 md:h-20 w-64 md:w-[350px] shrink-0">
+          <Image
+            src="/dyp_transparent.png"
+            alt="DYP Incubation Hub"
+            fill
+            className="object-contain"
+            priority
+          />
         </a>
 
         {/* Desktop nav */}
@@ -47,9 +54,8 @@ export default function Navbar() {
           <button
             onClick={() => setSearchOpen((v) => !v)}
             aria-label="Search"
-            className={`ml-3 p-2 rounded-full transition-colors duration-150 ${
-              searchOpen ? "bg-black text-white" : "hover:bg-black/10 text-black/70 hover:text-black"
-            }`}
+            className={`ml-3 p-2 rounded-full transition-colors duration-150 ${searchOpen ? "bg-black text-white" : "hover:bg-black/10 text-black/70 hover:text-black"
+              }`}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8" />
@@ -72,9 +78,8 @@ export default function Navbar() {
 
       {/* Expanding search bar */}
       <div
-        className={`hidden md:block overflow-hidden transition-all duration-300 bg-white/90 backdrop-blur-sm border-b border-black/8 ${
-          searchOpen ? "max-h-16 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`hidden md:block overflow-hidden transition-all duration-300 bg-white/90 backdrop-blur-sm border-b border-black/8 ${searchOpen ? "max-h-16 opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="px-8 md:px-12 lg:px-20 xl:px-24 py-4 flex items-center gap-3">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-black/50 shrink-0">
@@ -95,9 +100,8 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 bg-white/90 backdrop-blur-sm border-b border-black/8 ${
-          mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-300 bg-white/90 backdrop-blur-sm border-b border-black/8 ${mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="flex flex-col px-8 py-6 gap-5">
           {NAV_LINKS.map((label) => (
