@@ -16,7 +16,7 @@ export default function Footer() {
                 <div className="flex flex-col lg:flex-row justify-between gap-16 mb-20">
                     <div className="max-w-md">
                         <a href="/" className="text-4xl font-bold tracking-tight text-black flex items-center gap-[1px] mb-8">
-                            Balderton<span className="text-[#e23e3e]">.</span>
+                            DYP Incubation Hub<span className="text-[#e23e3e]">.</span>
                         </a>
                         <p className="text-xl text-black/60 font-sans leading-relaxed">
                             Empowering the next generation of founders to build world-changing companies from the ground up.
@@ -53,7 +53,7 @@ export default function Footer() {
                             Get in Touch
                         </h4>
                         <p className="text-lg font-bold text-black">
-                            contact@balderton.com
+                            incubation@dypcoeakurdi.ac.in
                         </p>
                     </div>
 
@@ -73,7 +73,7 @@ export default function Footer() {
                 {/* Bottom Section */}
                 <div className="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-xs font-bold text-black/30 uppercase tracking-widest">
-                        © {new Date().getFullYear()} Balderton Incubation Hub. All rights reserved.
+                        © {new Date().getFullYear()} dypcoeakurdi.ac.in. All rights reserved.
                     </p>
                     <div className="flex gap-8">
                         <p className="text-[10px] font-black text-black/20 uppercase tracking-[0.3em]">
