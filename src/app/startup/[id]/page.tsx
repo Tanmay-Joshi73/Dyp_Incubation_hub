@@ -55,11 +55,36 @@ export default async function StartupPage({ params }: { params: Promise<{ id: st
                                 <span className="text-xs font-bold text-black/40 uppercase tracking-widest">Industry</span>
                                 <span className="text-sm font-bold text-black">{startup.industry}</span>
                             </div>
-                            <div className="flex items-center justify-between py-4 border-b border-black/5">
-                                <span className="text-xs font-bold text-black/40 uppercase tracking-widest">Website</span>
-                                <a href={startup.website} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-[#e23e3e] hover:underline">
-                                    {startup.website.replace('https://', '')}
-                                </a>
+                            {startup.website && (
+                                <div className="flex items-center justify-between py-4 border-b border-black/5">
+                                    <span className="text-xs font-bold text-black/40 uppercase tracking-widest">Website</span>
+                                    <a href={startup.website} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-[#e23e3e] hover:underline">
+                                        {startup.website.replace('https://', '').replace('http://', '')}
+                                    </a>
+                                </div>
+                            )}
+                            {startup.media && (
+                                <div className="flex items-center justify-between py-4 border-b border-black/5">
+                                    <span className="text-xs font-bold text-black/40 uppercase tracking-widest">Media</span>
+                                    <a href={startup.media} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-[#e23e3e] hover:underline">
+                                        View Coverage
+                                    </a>
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Contact Info Card */}
+                        <div className="mt-8 p-6 bg-white/50 rounded-2xl border border-black/5">
+                            <h3 className="text-xs font-black text-black/30 uppercase tracking-[0.2em] mb-6">Contact Info</h3>
+                            <div className="flex flex-col gap-4">
+                                <div>
+                                    <p className="text-[10px] font-bold text-black/40 uppercase mb-1">Email Address</p>
+                                    <p className="text-sm font-bold text-black">{startup.email}</p>
+                                </div>
+                                <div>
+                                    <p className="text-[10px] font-bold text-black/40 uppercase mb-1">Phone Number</p>
+                                    <p className="text-sm font-bold text-black">{startup.phoneNo}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -72,18 +97,43 @@ export default async function StartupPage({ params }: { params: Promise<{ id: st
 
                         <div className="h-[2px] w-32 bg-[#e23e3e] mb-12 opacity-60"></div>
 
-                        <p className="text-2xl lg:text-3xl text-black/80 font-sans leading-relaxed mb-12 max-w-2xl">
-                            {startup.description}
+                        <div className="mb-12">
+                            <p className="text-xs font-black text-black/30 uppercase tracking-[0.3em] mb-6">Founders</p>
+                            <div className="flex flex-wrap gap-8 lg:gap-12">
+                                {startup.founder.map((name, index) => (
+                                    <div key={index} className="flex flex-col items-center lg:items-start gap-4">
+                                        {startup.founderPhotos && startup.founderPhotos[index] && (
+                                            <div className="relative w-32 h-32 lg:w-40 lg:h-40 rounded-3xl overflow-hidden border border-black/5 shadow-xl transition-transform hover:scale-105 duration-300">
+                                                <Image
+                                                    src={startup.founderPhotos[index]}
+                                                    alt={name}
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                        )}
+                                        <p className="text-xl lg:text-2xl font-serif text-[#172b2d] font-medium text-center lg:text-left">{name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <p className="text-2xl lg:text-3xl text-black/80 font-sans leading-relaxed mb-12 max-w-2xl italic">
+                            "{startup.description}"
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-12 border-t border-black/10">
                             <div>
-                                <h3 className="text-xs font-black text-black/30 uppercase tracking-[0.3em] mb-4">Investment Stage</h3>
-                                <p className="text-lg font-bold text-black">Late Stage Growth</p>
+                                <h3 className="text-xs font-black text-black/30 uppercase tracking-[0.3em] mb-4">Special Achievement</h3>
+                                <p className="text-lg font-bold text-black">{startup.specialAchievement}</p>
+                            </div>
+                            <div>
+                                <h3 className="text-xs font-black text-black/30 uppercase tracking-[0.3em] mb-4">Founding Year</h3>
+                                <p className="text-lg font-bold text-black">{startup.foundingYear}</p>
                             </div>
                             <div>
                                 <h3 className="text-xs font-black text-black/30 uppercase tracking-[0.3em] mb-4">Headquarters</h3>
-                                <p className="text-lg font-bold text-black">San Francisco, CA</p>
+                                <p className="text-lg font-bold text-black">{startup.address}</p>
                             </div>
                         </div>
 

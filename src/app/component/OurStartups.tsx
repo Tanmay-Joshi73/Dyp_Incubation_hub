@@ -48,7 +48,7 @@ export default function OurStartups() {
                                         src={startup.logo}
                                         alt={startup.name}
                                         fill
-                                        className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100 p-2"
+                                        className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100 p-8"
                                     />
                                 </div>
                             </div>

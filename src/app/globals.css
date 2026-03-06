@@ -5,14 +5,14 @@
   --background: #fdfaf5;
   --foreground: #1a1a1a;
 
-  --bg-1: #e6f0fa;
-  /* Light Blue */
-  --bg-2: #ffe4e9;
-  /* Light Pink */
-  --bg-3: #ffffff;
-  /* White */
-  --bg-4: #ffead2;
   /* Light Orange */
+  --bg-1: #ffead2;
+  /* Light Blue */
+  --bg-2: #e6f0fa;
+  /* Light Pink */
+  --bg-3: #ffe4e9;
+  /* White */
+  --bg-4: #ffffff;
 }
 
 @theme inline {
