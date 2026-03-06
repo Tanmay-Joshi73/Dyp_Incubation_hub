@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function MissionVision() {
     return (
-        <section className="bg-black/5 py-24 px-8 md:px-12 lg:px-16 overflow-hidden">
+        <section className="bg-white py-24 px-8 md:px-12 lg:px-16 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
