@@ -7,7 +7,7 @@ import { startups } from '../data/startups';
 
 export default function OurStartups() {
     return (
-        <section className="relative w-full py-24 overflow-hidden bg-white/30 backdrop-blur-sm border-t border-black/5">
+        <section className="relative w-full py-24 overflow-hidden bg-[#ffead2] border-t border-black/5">
             <div className="container mx-auto px-8 lg:px-16 flex flex-col lg:flex-row items-center gap-16">
 
                 {/* Left Side: Text Content - ENLARGED */}

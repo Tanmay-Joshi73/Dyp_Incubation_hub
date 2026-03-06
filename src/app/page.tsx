@@ -10,6 +10,7 @@ import WhatWeOffer from './component/WhatWeOffer';
 import MissionVision from './component/MissionVision';
 import IncubationProcess from './component/IncubationProcess';
 import OurStartups from './component/OurStartups';
+import Footer from './component/Footer';
 
 export default function Home() {
   const { currentIndex, currentFounder, founders, setCurrentIndex } = useFounderRotation(5000);
@@ -45,6 +46,7 @@ export default function Home() {
       {/* WhatWeOffer section will now also have the transitioning background */}
       <WhatWeOffer />
       <OurStartups />
+      <Footer />
     </div>
   );
 }

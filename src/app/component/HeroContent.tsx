@@ -15,6 +15,8 @@ export default function HeroContent({ currentIndex, founderName, founderRole }: 
       <div key={currentIndex} className="fade-in mt-12 lg:mt-0">
         <h1 className="font-serif text-[clamp(3.5rem,10vw,7.5rem)] font-medium leading-[1.02] tracking-tight text-[#172b2d]">
           The best way to change the world is to build a business.
+          {/* Where Student Ideas Become Real Startups */}
+          {/* Empowering the Next Generation of The Student Founders */}
           <div className="h-[2px] w-full max-w-md bg-[#e23e3e] mt-2 opacity-60"></div>
         </h1>
       </div>

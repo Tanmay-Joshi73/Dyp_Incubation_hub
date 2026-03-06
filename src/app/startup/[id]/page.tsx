@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { startups } from '../../data/startups';
 import Navbar from '../../component/Navbar';
+import Footer from '../../component/Footer';
 
 export default async function StartupPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
@@ -92,6 +93,7 @@ export default async function StartupPage({ params }: { params: Promise<{ id: st
                     </div>
                 </div>
             </main>
+            <Footer />
         </div>
     );
 }
